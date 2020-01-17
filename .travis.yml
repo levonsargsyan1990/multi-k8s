@@ -3,6 +3,7 @@ services:
     - docker
 
 before_install:
+    - ls
     - docker build -t levonsargsyan1990/react-test -f ./client/Dockerfile.dev ./client
 
 scripts:
