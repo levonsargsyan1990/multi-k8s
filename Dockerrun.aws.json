@@ -4,6 +4,7 @@
         {
             "name": "client",
             "image": "levonsargsyan1990/multi-client",
+            "MemoryReservation": 256,
             "hostname": "client",
             "essential": false
         },
