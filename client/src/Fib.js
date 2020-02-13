@@ -3,9 +3,9 @@ import axios from 'axios';
 
 class Fib extends Component {
     state = {
-       seenIndexes: [],
-       values: {},
-       index: '' 
+        seenIndexes: [],
+        values: {},
+        index: ''
     };
 
     componentDidMount() {
@@ -33,7 +33,7 @@ class Fib extends Component {
 
         console.log(this.state.values)
 
-        for(let key in this.state.values) {
+        for (let key in this.state.values) {
             entries.push(
                 <div key={key}>
                     For index {key} I calculated {this.state.values[key]}
@@ -46,7 +46,7 @@ class Fib extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault();
-        if(this.state.index) {
+        if (this.state.index) {
             axios.post('/api/values', {
                 index: this.state.index
             });
@@ -57,6 +57,9 @@ class Fib extends Component {
     render() {
         return (
             <div>
+                <h1>
+                    Hey there
+                </h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Enter your index:
@@ -75,7 +78,7 @@ class Fib extends Component {
                 </h3>
                 {this.renderSeenIndexes()}
                 <h3>
-                    Calculated values: 
+                    Calculated values:
                 </h3>
                 {this.renderCalculatedValues()}
             </div>
